@@ -1,4 +1,4 @@
-const Page = ({id, title, body, author, created_at}) {
+const Page = ({id, title, body, author, created_at, deletePage }) {
   return (
     <li>
     <hi>{ title }</hi>
@@ -7,6 +7,9 @@ const Page = ({id, title, body, author, created_at}) {
     <p>
     Created: { create_at }
     </p>
+    <button onClick={() => deletePage(id)}>
+    Delete
+    </button>
     </li>
   )
 }
